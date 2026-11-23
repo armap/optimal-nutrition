@@ -151,16 +151,22 @@ details.fold > summary:hover { background: #edf5e9; }
 .section-content li > ul, .section-content li > ol {
   margin-top: .55em;
   margin-bottom: .7em;
-  margin-left: -1.35em;
-  padding-left: 1.35em;
+  margin-left: -1.55em;
+  padding: .38em .75em .42em 1.55em;
   position: relative;
+  border-radius: 10px;
+  background: var(--group-bg, #f3f7f1);
+  box-shadow: inset 3px 0 var(--group-accent, #8eaa83);
 }
 
-/* Keep nested text aligned; show depth in a separate guide gutter. */
+/* Nested groups stay full width; color and square markers carry the hierarchy. */
 .section-content ul ul,
 .section-content ul ol,
 .section-content ol ul,
-.section-content ol ol { --branch-level: 1; }
+.section-content ol ol {
+  --group-accent: #78956e;
+  --group-bg: #f2f7ef;
+}
 .section-content ul ul ul,
 .section-content ul ul ol,
 .section-content ul ol ul,
@@ -168,7 +174,10 @@ details.fold > summary:hover { background: #edf5e9; }
 .section-content ol ul ul,
 .section-content ol ul ol,
 .section-content ol ol ul,
-.section-content ol ol ol { --branch-level: 2; }
+.section-content ol ol ol {
+  --group-accent: #7891ad;
+  --group-bg: #f1f5fa;
+}
 .section-content ul ul ul ul,
 .section-content ul ul ul ol,
 .section-content ul ul ol ul,
@@ -184,22 +193,17 @@ details.fold > summary:hover { background: #edf5e9; }
 .section-content ol ol ul ul,
 .section-content ol ol ul ol,
 .section-content ol ol ol ul,
-.section-content ol ol ol ol { --branch-level: 3; }
-.section-content li > ul::before,
-.section-content li > ol::before {
-  content: "";
-  position: absolute;
-  top: .12em;
-  bottom: .25em;
-  left: calc(var(--branch-level, 1) * 4px);
-  width: 1px;
-  border-radius: 1px;
-  background: #d9e4d5;
-  pointer-events: none;
+.section-content ol ol ol ol {
+  --group-accent: #b08a50;
+  --group-bg: #faf6ed;
 }
-.section-content ul ul { list-style-type: circle; }
-.section-content ul ul ul { list-style-type: square; }
-.section-content ul ul ul ul { list-style-type: disc; }
+.section-content ul ul,
+.section-content ul ul ul,
+.section-content ul ul ul ul { list-style-type: square; }
+.section-content ul ul > li::marker,
+.section-content ol ol > li::marker,
+.section-content ul ol > li::marker,
+.section-content ol ul > li::marker { color: var(--group-accent, #78956e); }
 .fold.subsection {
   margin: 0 0 18px;
   border-color: #e1e9dd;
@@ -264,10 +268,10 @@ details.fold > .section-content > .collapse-rail:focus-visible {
   .section-content li > ul, .section-content li > ol {
     margin-left: -1.2em;
     padding-left: 1.2em;
-  }
-  .section-content li > ul::before, .section-content li > ol::before {
-    left: calc(var(--branch-level, 1) * 3px);
-    background: #d9e4d5;
+    padding-right: .55em;
+    padding-top: .34em;
+    padding-bottom: .38em;
+    border-radius: 9px;
   }
   .section-content li { margin: .58em 0; }
   .topic { padding: 17px 15px 18px; border-radius: 10px; }
