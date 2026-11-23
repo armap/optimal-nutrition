@@ -105,7 +105,7 @@ details.fold > summary:hover { background: #edf5e9; }
 .section-content {
   min-width: 0;
   padding: clamp(20px, 3.4vw, 34px) clamp(18px, 4vw, 38px) 36px;
-  padding-left: 52px;
+  padding-left: 30px;
   overflow-wrap: anywhere;
 }
 .section-content > :first-child { margin-top: 0; }
@@ -151,7 +151,55 @@ details.fold > summary:hover { background: #edf5e9; }
 .section-content li > ul, .section-content li > ol {
   margin-top: .55em;
   margin-bottom: .7em;
+  margin-left: -1.35em;
+  padding-left: 1.35em;
+  position: relative;
 }
+
+/* Keep nested text aligned; show depth in a separate guide gutter. */
+.section-content ul ul,
+.section-content ul ol,
+.section-content ol ul,
+.section-content ol ol { --branch-level: 1; }
+.section-content ul ul ul,
+.section-content ul ul ol,
+.section-content ul ol ul,
+.section-content ul ol ol,
+.section-content ol ul ul,
+.section-content ol ul ol,
+.section-content ol ol ul,
+.section-content ol ol ol { --branch-level: 2; }
+.section-content ul ul ul ul,
+.section-content ul ul ul ol,
+.section-content ul ul ol ul,
+.section-content ul ul ol ol,
+.section-content ul ol ul ul,
+.section-content ul ol ul ol,
+.section-content ul ol ol ul,
+.section-content ul ol ol ol,
+.section-content ol ul ul ul,
+.section-content ol ul ul ol,
+.section-content ol ul ol ul,
+.section-content ol ul ol ol,
+.section-content ol ol ul ul,
+.section-content ol ol ul ol,
+.section-content ol ol ol ul,
+.section-content ol ol ol ol { --branch-level: 3; }
+.section-content li > ul::before,
+.section-content li > ol::before {
+  content: "";
+  position: absolute;
+  top: .12em;
+  bottom: .25em;
+  left: calc(var(--branch-level, 1) * 4px);
+  width: 1px;
+  border-radius: 1px;
+  background: #d9e4d5;
+  pointer-events: none;
+}
+.section-content ul ul { list-style-type: circle; }
+.section-content ul ul ul { list-style-type: square; }
+.section-content ul ul ul ul { list-style-type: disc; }
 .fold.subsection {
   margin: 0 0 18px;
   border-color: #e1e9dd;
@@ -167,7 +215,7 @@ details.fold > summary:hover { background: #edf5e9; }
 .fold.subsection .fold-title { font-size: 1.02rem; }
 .fold.subsection .section-content {
   padding: 22px clamp(17px, 3vw, 28px) 26px;
-  padding-left: 42px;
+  padding-left: 30px;
 }
 
 details.fold > .section-content > .collapse-rail {
@@ -209,14 +257,22 @@ details.fold > .section-content > .collapse-rail:focus-visible {
   .main-section > summary .fold-title { font-size: 1.1rem; }
   .main-section > .section-content > .collapse-rail { top: 74px; }
   details.fold > .section-content > .collapse-rail { width: 31px; }
-  .section-content { padding: 22px 15px 27px; padding-left: 41px; }
+  .section-content { padding: 22px 15px 27px; padding-left: 31px; }
   .section-content p { margin-bottom: 1.1em; }
   .section-content h3 { font-size: 1.02rem; margin-top: 1.45em; }
-  .section-content ul, .section-content ol { padding-left: 1.35em; }
+  .section-content ul, .section-content ol { padding-left: 1.2em; }
+  .section-content li > ul, .section-content li > ol {
+    margin-left: -1.2em;
+    padding-left: 1.2em;
+  }
+  .section-content li > ul::before, .section-content li > ol::before {
+    left: calc(var(--branch-level, 1) * 3px);
+    background: #d9e4d5;
+  }
   .section-content li { margin: .58em 0; }
   .topic { padding: 17px 15px 18px; border-radius: 10px; }
   .fold.subsection > summary { min-height: 66px; padding: 13px 14px; }
-  .fold.subsection .section-content { padding: 19px 13px 23px; padding-left: 36px; }
+  .fold.subsection .section-content { padding: 19px 13px 23px; padding-left: 29px; }
   .fold.subsection > .section-content > .collapse-rail { top: 66px; width: 29px; }
 }
 @media (prefers-reduced-motion: reduce) {
