@@ -151,7 +151,7 @@ const splitIcon=value=>{
 for(const node of [...template.content.childNodes]){
  if(node.nodeType===3&&!node.textContent.trim())continue;
  if(node.nodeType===1&&node.tagName==='H1'){
-  sectionNo++;subNo=0;const [icon,title]=splitIcon(node.textContent);
+  sectionNo++;const [icon,title]=splitIcon(node.textContent);
   section=document.createElement('details');section.className='sec';section.id='sec-'+sectionNo;section.open=true;
   const summary=document.createElement('summary');summary.dataset.h='1';
   const emo=document.createElement('span');emo.className='emo';emo.setAttribute('aria-hidden','true');emo.textContent=icon;summary.append(emo);
