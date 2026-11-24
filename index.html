@@ -85,11 +85,21 @@ box-shadow:0 10px 30px -18px rgba(14,80,64,.4);scroll-margin-top:calc(var(--top)
 mark{padding:0 .15em;border-radius:3px;background:#FFE48A;color:inherit}
 .chip{display:inline-block;min-width:2.3em;margin-right:.5em;padding:0 .6em;border-radius:99px;text-align:center;font-size:.82rem;font-weight:700;line-height:1.5}
 .v-no .chip{background:#FBE1DE;color:#8E1B16}.v-yes .chip{background:#D9F0DF;color:#17622A}
+:root{--mp:8px}
+.crumbs{position:fixed;z-index:25;top:var(--top);left:0;right:0;display:none;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 8px 18px -12px rgba(14,80,64,.45)}
+.crumbs.on{display:block}
+.cr{display:flex;align-items:center;gap:8px;height:34px;max-width:860px;margin:0 auto;padding:0 calc(var(--mp) + 8px);cursor:pointer;font:700 .85rem/1 "Bricolage Grotesque",system-ui,sans-serif}
+.cr[hidden]{display:none}
+.cr2{padding-left:calc(var(--mp) + 22px);color:var(--brand-d);font-weight:600}
+.cr .e{flex:none}.cr .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cr .u{flex:none;width:8px;height:8px;border-left:2px solid var(--mute);border-top:2px solid var(--mute);transform:translateY(2px) rotate(45deg)}
+.sec .sec{scroll-margin-top:calc(var(--top) + 46px)}
 .fold-end{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;margin:16px 0 0;padding:0 14px;border:0;border-radius:12px;background:#E6F3EE;color:var(--brand-d);font-weight:700;font-size:.92rem;cursor:pointer}
 .fold-end::before{content:"";width:8px;height:8px;border-left:2.5px solid currentColor;border-top:2.5px solid currentColor;transform:translateY(2px) rotate(45deg)}
 .fold-end:hover{background:#D6ECE3}
-@media(min-width:768px){html{font-size:16px}main{padding:24px 24px 80px}.sec>summary{padding:14px 18px;min-height:64px}.sec-body{padding:6px 20px 20px}.sec .sec .sec-body{padding:4px 16px 16px}}
+@media(min-width:768px){:root{--mp:24px}html{font-size:16px}main{padding:24px 24px 80px}.sec>summary{padding:14px 18px;min-height:64px}.sec-body{padding:6px 20px 20px}.sec .sec .sec-body{padding:4px 16px 16px}}
 @media(min-width:1024px){
+:root{--mp:32px}.crumbs{left:320px}
 .layout{display:grid;grid-template-columns:320px minmax(0,1fr);align-items:start}
 .drawer{position:sticky;top:var(--top);z-index:1;width:auto;height:calc(100vh - var(--top));transform:none;box-shadow:none;
 background:rgba(255,255,255,.72);border-right:1px solid var(--line)}
@@ -105,6 +115,7 @@ main{padding:32px 32px 90px}
 <span class="name">Fonaments de nutrició</span>
 <button class="btn" id="tgl" type="button">Plega-ho tot</button>
 </header>
+<div class="crumbs" id="crumbs" aria-hidden="true"><div class="cr cr1" hidden></div><div class="cr cr2" hidden></div></div>
 <div class="layout">
 <aside class="drawer" id="drawer" aria-label="Índex">
 <div class="dh"><span>Índex</span><button class="btn dclose" id="dclose" aria-label="Tanca l'índex">✕</button></div>
@@ -139,9 +150,18 @@ const label=()=>{tgl.textContent=all.some(d=>d.open)?'Plega-ho tot':'Desplega-ho
 tgl.onclick=()=>{const any=all.some(d=>d.open);all.forEach(d=>d.open=!any);label()};
 all.forEach(d=>d.addEventListener('toggle',label));label();
 const links=new Map($$('.toc a').map(a=>[a.getAttribute('href').slice(1),a]));let tick=0;
-function spy(){tick=0;let cur=null;for(const d of all)if(d.getBoundingClientRect().top<=120)cur=d.id;
-links.forEach((a,id)=>id===cur?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'))}
-addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(spy)},{passive:true});spy();
+const crumbs=$('#crumbs'),rows=[$('.cr1',crumbs),$('.cr2',crumbs)],topbar=$('.top');
+const mk=(c,t)=>{const x=document.createElement('span');x.className=c;if(t)x.textContent=t;return x};
+function spy(){tick=0;let cur=null;const chain=[],T=topbar.offsetHeight;
+for(const d of all){const r=d.getBoundingClientRect();if(r.top<=120)cur=d.id;
+if(d.open&&r.bottom>T+40&&d.querySelector('summary').getBoundingClientRect().bottom<=T+8)chain.push(d)}
+links.forEach((a,id)=>id===cur?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'));
+rows.forEach((row,i)=>{const d=chain[i];row.hidden=!d;if(d&&row.dataset.id!==d.id){const s=d.querySelector('summary');row.dataset.id=d.id;
+row.replaceChildren(mk('e',$('.emo',s).textContent),mk('t',$('.ttl',s).textContent),mk('u'))}});
+crumbs.classList.toggle('on',chain.length>0)}
+addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(spy)},{passive:true});
+addEventListener('resize',spy);all.forEach(d=>d.addEventListener('toggle',spy));
+crumbs.addEventListener('click',e=>{const r=e.target.closest('.cr');if(r&&r.dataset.id)reveal(r.dataset.id,true)});spy();
 document.addEventListener('click',e=>{const b=e.target.closest('.fold-end');if(!b)return;const d=b.closest('details');d.open=false;
 d.querySelector('summary').focus({preventScroll:true});if(d.getBoundingClientRect().top<70)d.scrollIntoView()});
 if(location.hash)reveal(location.hash.slice(1),true);
