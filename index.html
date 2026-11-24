@@ -159,6 +159,12 @@ addEventListener('resize',spy);all.forEach(d=>d.addEventListener('toggle',spy));
 crumbs.addEventListener('click',e=>{const r=e.target.closest('.cr');if(r&&r.dataset.id)reveal(r.dataset.id,true)});spy();
 document.addEventListener('click',e=>{const b=e.target.closest('.fold-end');if(!b)return;const d=b.closest('details');d.open=false;
 d.querySelector('summary').focus({preventScroll:true});if(d.getBoundingClientRect().top<70)d.scrollIntoView()});
+let sx=0,sy=0,tr=false;
+addEventListener('touchstart',e=>{tr=!mq.matches&&e.touches.length===1;if(tr){sx=e.touches[0].clientX;sy=e.touches[0].clientY}},{passive:true});
+addEventListener('touchcancel',()=>{tr=false},{passive:true});
+addEventListener('touchend',e=>{if(!tr)return;tr=false;const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;
+if(Math.abs(dx)<60||Math.abs(dx)<Math.abs(dy)*1.8)return;
+const open=drawer.classList.contains('open');if(!open&&dx>0)setDrawer(true);else if(open&&dx<0)setDrawer(false)},{passive:true});
 if(location.hash)reveal(location.hash.slice(1),true);
 addEventListener('hashchange',()=>reveal(location.hash.slice(1),true));
 </script>
