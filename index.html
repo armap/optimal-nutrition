@@ -134,7 +134,62 @@ main{max-width:none;margin:0;padding:16px 0 90px}
 <main id="content"></main>
 </div>
 <div class="scrim" id="scrim"></div>
+<script src="https://cdn.jsdelivr.net/npm/marked@18.0.14/lib/marked.umd.js"></script>
 <script>
+(async()=>{
+const mount=document.querySelector('#content');
+const response=await fetch('./content.md');
+if(!response.ok)throw new Error('Could not load page content');
+const source=await response.text();
+const template=document.createElement('template');
+template.innerHTML=marked.parse(source,{gfm:true});
+let section=null,body=null,sectionNo=0,subNo=0;
+const splitIcon=value=>{
+ const m=value.match(/^((?:\p{Extended_Pictographic}(?:\uFE0F|\uFE0E)?(?:\u200D\p{Extended_Pictographic}(?:\uFE0F|\uFE0E)?)*\s*)+)/u);
+ return m?[m[1].trim(),value.slice(m[0].length).trim()]:['',value.trim()];
+};
+for(const node of [...template.content.childNodes]){
+ if(node.nodeType===1&&node.tagName==='H1'){
+  sectionNo++;subNo=0;const [icon,title]=splitIcon(node.textContent);
+  section=document.createElement('details');section.className='sec';section.id='sec-'+sectionNo;section.open=true;
+  const summary=document.createElement('summary');summary.dataset.h='1';
+  const emo=document.createElement('span');emo.className='emo';emo.setAttribute('aria-hidden','true');emo.textContent=icon;summary.append(emo);
+  const ttl=document.createElement('span');ttl.className='ttl';ttl.textContent=title;summary.append(ttl);
+  const chev=document.createElement('span');chev.className='chev';chev.setAttribute('aria-hidden','true');summary.append(chev);
+  body=document.createElement('div');body.className='sec-body';section.append(summary,body);mount.append(section);
+ }else if(section&&node.nodeType===1){
+  if(node.tagName==='H2'||node.tagName==='H3'){
+   const level=node.tagName==='H2'?2:3;subNo++;const [icon,title]=splitIcon(node.textContent);
+   const heading=document.createElement(level===2?'h3':'h4');heading.className='hd '+(level===2?'hd2':'hd3');heading.id='h-'+subNo;heading.dataset.h=String(level);
+   if(icon){const e=document.createElement('span');e.className='emo';e.setAttribute('aria-hidden','true');e.textContent=icon;heading.append(e)}
+   const t=document.createElement('span');t.className='ht';t.innerHTML=marked.parseInline(title);heading.append(t);body.append(heading);
+  }else body.append(node);
+ }else if(section&&node.nodeType===8&&/^ nutrition-/.test(node.data))body.append(node);
+}
+const decorate=(parent,depth=1)=>{
+ let pending=null;
+ for(const n of [...parent.childNodes]){
+  if(n.nodeType===8){if(n.data.startsWith(' nutrition-list:'))pending=n.data.split(':')[1].trim();else if(n.data.trim()==='nutrition-dash')pending='dash';continue}
+  if(n.nodeType!==1)continue;
+  if(pending&&n.tagName==='UL'){n.classList.add('lv','lv'+depth);if(pending==='v-no'||pending==='v-yes')n.classList.add(pending);pending=null}
+  else if(pending==='dash'&&n.tagName==='P'){n.classList.add('dash');pending=null}
+  if(n.tagName==='UL')decorate(n,Math.min(depth+1,4));
+  else if(n.children.length)decorate(n,depth);
+ }
+};
+decorate(template.content);
+for(const h of template.content.querySelectorAll('h4')){} 
+for(const node of [...template.content.childNodes])if(node.nodeType===1)body?.append(node);
+const toc=document.querySelector('#toc-list');
+for(const h of mount.querySelectorAll('[data-h]')){
+ const level=Number(h.dataset.h),target=h.id||h.closest('details')?.id;
+ const title=(level===1?h.querySelector('.ttl'):h.querySelector('.ht'))?.textContent?.trim();
+ if(!target||!title)continue;
+ const li=document.createElement('li');li.className='n'+level;const link=document.createElement('a');link.href='#'+target;
+ const icon=h.querySelector('.emo');if(icon){const copy=icon.cloneNode(true);copy.classList.add('nemo');link.append(copy)}
+ const text=document.createElement('span');text.className='nt';text.textContent=title;link.append(text);li.append(link);toc.append(li);
+}
+
 (async()=>{
 const mount=document.querySelector('#content');
 const response=await fetch('./content.html');
@@ -199,6 +254,8 @@ const open=drawer.classList.contains('open');if(!open&&dx>0)setDrawer(true);else
 tstate();spy();
 if(location.hash)reveal(location.hash.slice(1),true);
 addEventListener('hashchange',()=>reveal(location.hash.slice(1),true));
+
+})().catch(error=>{console.error(error);document.querySelector('#content').textContent='No s’ha pogut carregar el contingut.'});
 
 })().catch(error=>{console.error(error);document.querySelector('#content').textContent='No s’ha pogut carregar el contingut.'});
 </script>
