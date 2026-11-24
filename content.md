@@ -1,5 +1,3 @@
-# Fonaments de nutrició òptimament saludable
-
 # ⚖️ 1. Equilibrar i agrupar macro-nutrients
 
 ## 🥩🧈🍊🍠 1.1. Tipus de macro-nutrients, importància i proporció adequada
