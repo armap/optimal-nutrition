@@ -149,6 +149,7 @@ const splitIcon=value=>{
  return m?[m[1].trim(),value.slice(m[0].length).trim()]:['',value.trim()];
 };
 for(const node of [...template.content.childNodes]){
+ if(node.nodeType===3&&!node.textContent.trim())continue;
  if(node.nodeType===1&&node.tagName==='H1'){
   sectionNo++;subNo=0;const [icon,title]=splitIcon(node.textContent);
   section=document.createElement('details');section.className='sec';section.id='sec-'+sectionNo;section.open=true;
@@ -164,22 +165,19 @@ for(const node of [...template.content.childNodes]){
    if(icon){const e=document.createElement('span');e.className='emo';e.setAttribute('aria-hidden','true');e.textContent=icon;heading.append(e)}
    const t=document.createElement('span');t.className='ht';t.innerHTML=marked.parseInline(title);heading.append(t);body.append(heading);
   }else body.append(node);
- }else if(section&&node.nodeType===8&&/^ nutrition-/.test(node.data))body.append(node);
+ }else if(section&&node.nodeType===8)body.append(node);
 }
 const decorate=(parent,depth=1)=>{
  let pending=null;
  for(const n of [...parent.childNodes]){
-  if(n.nodeType===8){if(n.data.startsWith(' nutrition-list:'))pending=n.data.split(':')[1].trim();else if(n.data.trim()==='nutrition-dash')pending='dash';continue}
+  if(n.nodeType===8){const marker=n.data.trim();if(marker.startsWith('nutrition-list:'))pending=marker.split(':')[1].trim();else if(marker==='nutrition-dash')pending='dash';continue}
   if(n.nodeType!==1)continue;
-  if(pending&&n.tagName==='UL'){n.classList.add('lv','lv'+depth);if(pending==='v-no'||pending==='v-yes')n.classList.add(pending);pending=null}
-  else if(pending==='dash'&&n.tagName==='P'){n.classList.add('dash');pending=null}
-  if(n.tagName==='UL')decorate(n,Math.min(depth+1,4));
-  else if(n.children.length)decorate(n,depth);
+  if(n.tagName==='UL'){n.classList.add('lv','lv'+Math.min(depth,4));if(pending==='v-no'||pending==='v-yes')n.classList.add(pending);pending=null;decorate(n,depth+1);continue}
+  if(pending==='dash'&&n.tagName==='P'){n.classList.add('dash');pending=null}
+  decorate(n,depth);
  }
 };
-decorate(template.content);
-for(const h of template.content.querySelectorAll('h4')){} 
-for(const node of [...template.content.childNodes])if(node.nodeType===1)body?.append(node);
+decorate(mount);
 const toc=document.querySelector('#toc-list');
 for(const h of mount.querySelectorAll('[data-h]')){
  const level=Number(h.dataset.h),target=h.id||h.closest('details')?.id;
@@ -189,25 +187,6 @@ for(const h of mount.querySelectorAll('[data-h]')){
  const icon=h.querySelector('.emo');if(icon){const copy=icon.cloneNode(true);copy.classList.add('nemo');link.append(copy)}
  const text=document.createElement('span');text.className='nt';text.textContent=title;link.append(text);li.append(link);toc.append(li);
 }
-
-(async()=>{
-const mount=document.querySelector('#content');
-const response=await fetch('./content.html');
-if(!response.ok)throw new Error('Could not load page content');
-mount.innerHTML=await response.text();
-const toc=document.querySelector('#toc-list');
-for(const h of mount.querySelectorAll('[data-h]')){
- const level=Number(h.dataset.h);
- const target=h.id||h.closest('details')?.id;
- const title=(level===1?h.querySelector('.ttl'):h.querySelector('.ht'))?.textContent?.trim();
- if(!target||!title)continue;
- const li=document.createElement('li');li.className='n'+level;
- const link=document.createElement('a');link.href='#'+target;
- const icon=h.querySelector('.emo');
- if(icon){const copy=icon.cloneNode(true);copy.classList.add('nemo');link.append(copy)}
- const text=document.createElement('span');text.className='nt';text.textContent=title;link.append(text);li.append(link);toc.append(li);
-}
-
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const drawer=$('#drawer'),scrim=$('#scrim'),menu=$('#menu'),tgl=$('#tgl'),topbar=$('.top'),crumbs=$('#crumbs'),rows=$$('.cr',crumbs),
 mq=matchMedia('(min-width:1024px)'),secs=$$('details.sec'),heads=$$('[data-h]');
@@ -254,9 +233,6 @@ const open=drawer.classList.contains('open');if(!open&&dx>0)setDrawer(true);else
 tstate();spy();
 if(location.hash)reveal(location.hash.slice(1),true);
 addEventListener('hashchange',()=>reveal(location.hash.slice(1),true));
-
-})().catch(error=>{console.error(error);document.querySelector('#content').textContent='No s’ha pogut carregar el contingut.'});
-
 })().catch(error=>{console.error(error);document.querySelector('#content').textContent='No s’ha pogut carregar el contingut.'});
 </script>
 </body>
