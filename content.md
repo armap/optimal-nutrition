@@ -94,11 +94,11 @@ En conclusió, lo millor és distribuir els àpats de la següent manera:
 <!-- nutrition-dash -->
 **- Sopar**: res de carbohidrats, igual gelatina/col·làgen, més proteïna i grassa.
 
-_Alguns dels_ **_<u>millors</u>_**_<u> </u>_**_<u>experts</u>_** _que han investigat, descobert i explicat perquè la grassa insaturada omega-6 causa disfunció metabòlica, són els següents:_ **_Tucker Goodrich, Brad Marshall, Anabology, Chris Masterjohn, Nick Jikomes, Jaromír Janda._**
+_Alguns dels_ <strong>_<u>millors</u>_</strong>_<u> </u>_<strong>_<u>experts</u>_</strong> _que han investigat, descobert i explicat perquè la grassa insaturada omega-6 causa disfunció metabòlica, són els següents:_ <strong>_Tucker Goodrich, Brad Marshall, Anabology, Chris Masterjohn, Nick Jikomes, Jaromír Janda._</strong>
 
 _Altres experts en salut metabòlica: Peter Dobromylskyj, Patrick Coles, Ray Peat, Ben Bikman, Cate Shanahan, Casey Means._
 
-_La millor experta que ha investigat, descobert i explicat el metabolisme ketogènic amb dieta keto-carnívora és_ **_Amber O'hearn_**_._
+_La millor experta que ha investigat, descobert i explicat el metabolisme ketogènic amb dieta keto-carnívora és_ <strong>_Amber O'hearn_</strong>_._
 
 # 🔬 2. Equilibrar i agrupar micro-nutrients (vitamines, minerals, anti-oxidants)
 
@@ -300,7 +300,7 @@ De totes formes, per revertir problemes de salut metabòlica o digestiva, normal
 - Vinagreta: **vinagre** de sidra de poma (sense filtrar) + culleradeta de **bicarbonat** sòdic alimentari/eco (per reduir acidesa) + **sal** normal o negra + poquet **oli de coco-oliva** verge extra.
 - Grassa més saturada (vitamina D, omega-3): **mantega/làctics** + **grassa “sebo”** de vedella + **ous eco** amb gema crua.
 - Opcional: herbes, espècies o infusió.
-- _Si es fa molt exercici físic o sinó es menja suficient carn gelatinosa,_ **_millor afegir més carn normal (proteïna) per dinar,_** _tot i així, és preferible deixar la major part de carn per sopar, separada dels carbohidrats._
+- _Si es fa molt exercici físic o sinó es menja suficient carn gelatinosa,_ <strong>_millor afegir més carn normal (proteïna) per dinar,_</strong> _tot i així, és preferible deixar la major part de carn per sopar, separada dels carbohidrats._
 - _La major part de grassa saturada millor deixar-la per sopar barrejada només amb proteïna enlloc de amb carbohidrats._
 
 ## Sopar (o dinar sinó es sopa, ja que la carn/grassa és indispensable, però els carbohidrats no)
