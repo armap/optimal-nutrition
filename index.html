@@ -25,6 +25,7 @@ button{font:inherit;color:inherit}
 padding:0 max(12px,env(safe-area-inset-right)) 0 max(12px,env(safe-area-inset-left));
 background:rgba(228,243,235,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .name{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:700 1rem/1.2 "Bricolage Grotesque",system-ui,sans-serif}
+.name{opacity:0;transition:opacity .2s}.top.titled .name{opacity:1}
 .btn{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 14px;
 border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;font-size:.95rem}
 .btn:hover{border-color:var(--brand)}
@@ -111,7 +112,7 @@ main{padding:32px 32px 90px}
 <body>
 <header class="top">
 <button class="btn menu" id="menu" aria-controls="drawer" aria-expanded="false"><span aria-hidden="true">☰</span> Índex</button>
-<span class="name">Fonaments de nutrició</span>
+<span class="name" aria-hidden="true">Fonaments de nutrició</span>
 <button class="btn" id="tgl" type="button">Plega-ho tot</button>
 </header>
 <div class="crumbs" id="crumbs" aria-hidden="true"><div class="cr cr1" hidden></div><div class="cr cr2" hidden></div></div>
@@ -144,7 +145,7 @@ const label=()=>{tgl.textContent=all.some(d=>d.open)?'Plega-ho tot':'Desplega-ho
 tgl.onclick=()=>{const any=all.some(d=>d.open);all.forEach(d=>d.open=!any);label()};
 all.forEach(d=>d.addEventListener('toggle',label));label();
 const links=new Map($$('.toc a').map(a=>[a.getAttribute('href').slice(1),a]));let tick=0;
-const crumbs=$('#crumbs'),rows=[$('.cr1',crumbs),$('.cr2',crumbs)],topbar=$('.top');
+const crumbs=$('#crumbs'),rows=[$('.cr1',crumbs),$('.cr2',crumbs)],topbar=$('.top'),h1=$('.hero h1');
 const mk=(c,t)=>{const x=document.createElement('span');x.className=c;if(t)x.textContent=t;return x};
 function spy(){tick=0;let cur=null;const chain=[],T=topbar.offsetHeight;
 for(const d of all){const r=d.getBoundingClientRect();if(r.top<=120)cur=d.id;
@@ -152,7 +153,7 @@ if(d.open&&r.bottom>T+40&&d.querySelector('summary').getBoundingClientRect().bot
 links.forEach((a,id)=>id===cur?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'));
 rows.forEach((row,i)=>{const d=chain[i];row.hidden=!d;if(d&&row.dataset.id!==d.id){const s=d.querySelector('summary');row.dataset.id=d.id;
 row.replaceChildren(mk('e',$('.emo',s).textContent),mk('t',$('.ttl',s).textContent),mk('u'))}});
-crumbs.classList.toggle('on',chain.length>0)}
+topbar.classList.toggle('titled',h1.getBoundingClientRect().bottom<T);crumbs.classList.toggle('on',chain.length>0)}
 addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(spy)},{passive:true});
 addEventListener('resize',spy);all.forEach(d=>d.addEventListener('toggle',spy));
 crumbs.addEventListener('click',e=>{const r=e.target.closest('.cr');if(r&&r.dataset.id)reveal(r.dataset.id,true)});spy();
