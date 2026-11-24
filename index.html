@@ -138,7 +138,7 @@ main{max-width:none;margin:0;padding:16px 0 90px}
 <script>
 (async()=>{
 const mount=document.querySelector('#content');
-const response=await fetch('./content.md');
+const response=await fetch('./content.md?v='+Date.now(),{cache:'no-store'});
 if(!response.ok)throw new Error('Could not load page content');
 const source=await response.text();
 const template=document.createElement('template');
