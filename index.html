@@ -26,6 +26,8 @@ padding:0 max(12px,env(safe-area-inset-right)) 0 max(12px,env(safe-area-inset-le
 background:rgba(228,243,235,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .name{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:700 1rem/1.2 "Bricolage Grotesque",system-ui,sans-serif}
 .name{opacity:0;transition:opacity .2s}.top.titled .name{opacity:1}
+.top{transition:transform .25s ease}.top.hide{transform:translateY(-100%)}
+.crumbs{transition:transform .25s ease}body.nobar .crumbs{transform:translateY(calc(var(--top) * -1))}
 .btn{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 14px;
 border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;font-size:.95rem}
 .btn:hover{border-color:var(--brand)}
@@ -136,8 +138,8 @@ const sync=()=>{drawer.inert=!mq.matches&&!drawer.classList.contains('open')};
 function setDrawer(on){drawer.classList.toggle('open',on);scrim.classList.toggle('on',on);menu.setAttribute('aria-expanded',on);sync();if(on)$('a',drawer).focus()}
 mq.addEventListener('change',()=>setDrawer(false));sync();
 menu.onclick=()=>setDrawer(true);scrim.onclick=()=>setDrawer(false);
-$('#dclose').onclick=()=>{setDrawer(false);menu.focus()};
-addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open')){setDrawer(false);menu.focus()}});
+$('#dclose').onclick=()=>{setDrawer(false);showBar();menu.focus({preventScroll:true})};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open')){setDrawer(false);showBar();menu.focus({preventScroll:true})}});
 function reveal(id,go){const t=document.getElementById(id);if(!t)return;for(let n=t;n;n=n.parentElement)if(n.tagName==='DETAILS')n.open=true;if(go)t.scrollIntoView()}
 $$('.toc a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);history.replaceState(null,'','#'+id);reveal(id,true);setDrawer(false)}));
 $$('.tg').forEach(b=>b.onclick=()=>{const l=b.closest('li').querySelector('ol'),ex=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!ex));l.hidden=ex});
@@ -147,13 +149,18 @@ all.forEach(d=>d.addEventListener('toggle',label));label();
 const links=new Map($$('.toc a').map(a=>[a.getAttribute('href').slice(1),a]));let tick=0;
 const crumbs=$('#crumbs'),rows=[$('.cr1',crumbs),$('.cr2',crumbs)],topbar=$('.top'),h1=$('.hero h1');
 const mk=(c,t)=>{const x=document.createElement('span');x.className=c;if(t)x.textContent=t;return x};
+let ly=scrollY;
+function showBar(){topbar.classList.remove('hide');document.body.classList.remove('nobar');ly=scrollY}
+function barSync(){const y=scrollY,dy=y-ly;if(Math.abs(dy)<8&&y>80)return;ly=y;
+const hide=!mq.matches&&y>80&&dy>0;topbar.classList.toggle('hide',hide);document.body.classList.toggle('nobar',hide)}
+topbar.addEventListener('focusin',showBar);
 function spy(){tick=0;let cur=null;const chain=[],T=topbar.offsetHeight;
 for(const d of all){const r=d.getBoundingClientRect();if(r.top<=120)cur=d.id;
 if(d.open&&r.bottom>T+40&&d.querySelector('summary').getBoundingClientRect().bottom<=T+8)chain.push(d)}
 links.forEach((a,id)=>id===cur?a.setAttribute('aria-current','true'):a.removeAttribute('aria-current'));
 rows.forEach((row,i)=>{const d=chain[i];row.hidden=!d;if(d&&row.dataset.id!==d.id){const s=d.querySelector('summary');row.dataset.id=d.id;
 row.replaceChildren(mk('e',$('.emo',s).textContent),mk('t',$('.ttl',s).textContent),mk('u'))}});
-topbar.classList.toggle('titled',h1.getBoundingClientRect().bottom<T);crumbs.classList.toggle('on',chain.length>0)}
+topbar.classList.toggle('titled',h1.getBoundingClientRect().bottom<T);crumbs.classList.toggle('on',chain.length>0);barSync()}
 addEventListener('scroll',()=>{if(!tick)tick=requestAnimationFrame(spy)},{passive:true});
 addEventListener('resize',spy);all.forEach(d=>d.addEventListener('toggle',spy));
 crumbs.addEventListener('click',e=>{const r=e.target.closest('.cr');if(r&&r.dataset.id)reveal(r.dataset.id,true)});spy();
