@@ -137,12 +137,12 @@ _La millor experta que ha investigat, descobert i explicat el metabolisme ketog�
 
 ## Macro/micro-nutrients anti-oxidants (anti-inflamatoris)
 
-- **(****Glicina** **= col·làgen de carn gelatinosa, caldo d’ossos o gelatina en pols)**
+- <strong>(</strong>**Glicina** **= col·làgen de carn gelatinosa, caldo d’ossos o gelatina en pols)**
 
-  **+ (****Cisteína i Glutamina** **= carn, làctics, ous, peix, òrgans):**
+  <strong>+ (</strong>**Cisteína i Glutamina** **= carn, làctics, ous, peix, òrgans):**
 
   Aquests 3 macro-nutrients (proteïnes) són els que utilitza el nostre cos per generar la principal hormona **anti-oxidant / anti-inflamatòria,** anomenada “**GLUTATIÓN**”.
-- **(****Polifenols** **= plantes/herbes):**
+- <strong>(</strong>**Polifenols** **= plantes/herbes):**
 
   Són micro-nutrients **anti-oxidants / anti-inflamatoris** que estan a les plantes (sobretot a les herbes) i també ajuden al nostre cos a generar “**GLUTATIÓN**”. Tot i així, les plantes (sinó estan fermentades o cuinades) també contenen antinutrients que poden ser **oxidants / inflamatoris**.
 
