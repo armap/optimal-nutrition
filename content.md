@@ -1,3 +1,13 @@
+<!--
+EDITING GUIDE — this note is hidden on the website.
+# Main section
+## Subsection
+### Smaller subsection
+- Bullet point
+  - Nested bullet (indent two spaces)
+**Bold text** and _italic text_
+-->
+
 # ⚖️ 1. Equilibrar i agrupar macro-nutrients
 
 ## 🥩🧈🍊🍠 1.1. Tipus de macro-nutrients, importància i proporció adequada
