@@ -1,0 +1,84 @@
+backend:
+  name: github
+  repo: armap/optimal-nutrition
+  branch: main
+media_folder: assets/uploads
+public_folder: /optimal-nutrition/assets/uploads
+collections:
+- name: site
+  label: Web content
+  files:
+  - name: content
+    label: Sections (Catalan, Spanish, English)
+    file: content/content.json
+    format: json
+    fields:
+    - label: Sections
+      label_singular: Section
+      name: sections
+      widget: list
+      summary: '{{fields.title_ca}}'
+      fields:
+      - label: Icon
+        name: icon
+        widget: string
+        required: false
+        hint: 'Emojis separated by spaces (several make a grid). Drawn icons: :yogurt: :butter: :kefir:'
+      - label: Title (Català)
+        name: title_ca
+        widget: string
+      - label: Title (Español)
+        name: title_es
+        widget: string
+        required: false
+      - label: Title (English)
+        name: title_en
+        widget: string
+        required: false
+      - label: Content blocks
+        label_singular: Block
+        name: blocks
+        widget: list
+        summary: '{{fields.kind}} · {{fields.ca}}'
+        fields:
+        - label: Type
+          name: kind
+          widget: select
+          default: p
+          options:
+          - label: Subtitle (level 2)
+            value: h2
+          - label: Sub-subtitle (level 3)
+            value: h3
+          - label: Paragraph
+            value: p
+          - label: Bullet point
+            value: li
+          - label: Line starting with a dash
+            value: dash
+          - label: Yes line (green chip)
+            value: 'yes'
+          - label: No line (red chip)
+            value: 'no'
+        - label: Depth
+          name: depth
+          widget: number
+          value_type: int
+          min: 0
+          max: 4
+          default: 0
+          hint: 'Bullets: 1 to 4 (1 = first level). A paragraph with depth 1 or more continues the bullet of that depth. Use 0 for normal paragraphs and subtitles.'
+        - label: Català
+          name: ca
+          widget: text
+          hint: 'Formatting: **bold**  _italic_  ++underline++  ==highlight==  {g}green{/g}  {r}red{/r}  {b}blue{/b}'
+        - label: Español
+          name: es
+          widget: text
+          required: false
+          hint: 'Formatting: **bold**  _italic_  ++underline++  ==highlight==  {g}green{/g}  {r}red{/r}  {b}blue{/b}  (if empty, the Catalan text is shown)'
+        - label: English
+          name: en
+          widget: text
+          required: false
+          hint: 'Formatting: **bold**  _italic_  ++underline++  ==highlight==  {g}green{/g}  {r}red{/r}  {b}blue{/b}  (if empty, the Catalan text is shown)'
