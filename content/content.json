@@ -1301,9 +1301,9 @@
     {
      "kind": "h3",
      "depth": 0,
-     "ca": "Les bactèries bones fermenten la llet",
-     "es": "Las bacterias buenas fermentan la leche",
-     "en": "The good bacteria ferment the milk"
+     "ca": "Tipus de llet per fermentar kefir",
+     "es": "Tipos de leche para fermentar kéfir",
+     "en": "Types of milk for fermenting kefir"
     },
     {
      "kind": "p",
@@ -1329,9 +1329,135 @@
     {
      "kind": "p",
      "depth": 0,
-     "ca": "A més a més, en el cas de la llet crua, com que també conté bactèries pròpies (inexistents en la llet pasteuritzada) també pot fermentar per si sola sense necessitat de barrejar-la amb nòduls o kefir.",
-     "es": "Además, en el caso de la leche cruda, como también contiene bacterias propias (inexistentes en la leche pasteurizada), también puede fermentar por sí sola sin necesidad de mezclarla con nódulos o kéfir.",
-     "en": "In addition, raw milk also contains its own bacteria (absent from pasteurized milk), so it can also ferment on its own without needing to be mixed with grains or kefir."
+     "ca": "La llet anomenada “**crua**” conté enzimes i bactèries beneficioses pròpies de la llet. Per això la llet crua és més saludable, fàcil de digerir i es pot fermentar per si sola sense necessitat de barrejar-la amb nòduls o una mica de kefir.",
+     "es": "La leche llamada “**cruda**” contiene enzimas y bacterias beneficiosas propias de la leche. Por eso la leche cruda es más saludable, fácil de digerir y puede fermentar por sí sola sin necesidad de mezclarla con nódulos o un poco de kéfir.",
+     "en": "Milk called “**raw**” contains enzymes and beneficial bacteria native to the milk. That is why raw milk is healthier, easier to digest and can ferment on its own without needing to be mixed with grains or a little kefir."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "La llet anomenada “**fresca**” està pasteuritzada (escalfada) a 75Cº durant mínim 15 segons, lo qual elimina a algunes enzimes i a la majoria de bactèries beneficioses de la llet. Això ho fan per evitar que alguna bactèria perjudicial pogués fer malbé la llet, ja que a la majoria de granges, les vaques tenen mala salut degut a les males condicions de vida i d'higiene. Per això, només venen llet crua les granges més ecològiques amb vaques sanes que no tenen risc d’infeccions. La llet fresca només pot fermentar si se li introdueixen noves bactèries, barrejant-la amb nòduls de kefir o amb kefir ja fermentat,",
+     "es": "La leche llamada “**fresca**” está pasteurizada (calentada) a 75Cº durante mínimo 15 segundos, lo cual elimina algunas enzimas y a la mayoría de bacterias beneficiosas de la leche. Esto lo hacen para evitar que alguna bacteria perjudicial pudiera estropear la leche, ya que en la mayoría de granjas, las vacas tienen mala salud debido a las malas condiciones de vida y de higiene. Por eso, solo venden leche cruda las granjas más ecológicas con vacas sanas que no tienen riesgo de infecciones. La leche fresca solo puede fermentar si se le introducen nuevas bacterias, mezclándola con nódulos de kéfir o con kéfir ya fermentado,",
+     "en": "Milk called “**fresh**” is pasteurized (heated) at 75Cº for at least 15 seconds, which eliminates some enzymes and most of the beneficial bacteria in the milk. They do this to prevent any harmful bacteria from spoiling the milk, since on most farms the cows are in poor health due to poor living and hygiene conditions. That is why only the most organic farms, with healthy cows that have no risk of infections, sell raw milk. Fresh milk can only ferment if new bacteria are introduced, by mixing it with kefir grains or with already fermented kefir,"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "La llet anomenada “**UHT**” està escalfada a “Ultra High Temperature”, cosa que fa que duri més sense caducar però també dificulta la fermentació i la digestió perquè s’han eliminat totes les enzimes beneficioses, juntament amb les bactèries. Per això és millor no beure’n ni tampoc utilitzar-la per fermentar, encara que sigui ecològica.",
+     "es": "La leche llamada “**UHT**” está calentada a “Ultra High Temperature”, lo que hace que dure más sin caducar pero también dificulta la fermentación y la digestión porque se han eliminado todas las enzimas beneficiosas, junto con las bacterias. Por eso es mejor no beberla ni tampoco utilizarla para fermentar, aunque sea ecológica.",
+     "en": "Milk called “**UHT**” is heated to Ultra High Temperature, which makes it last longer without expiring but also makes fermentation and digestion harder because all the beneficial enzymes have been eliminated, along with the bacteria. That is why it is better neither to drink it nor to use it for fermenting, even if it is organic."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "Es pot comprar llet fresca/pasteuritzada a molts supermercats, però hem de fixar-nos que en la etiqueta no posi UHT, ha de posar “fresca” o “pasteuritzada” explícitament, sinó ho posa, és UHT, encara que sigui ecològica (a vegades ho posen a la part de darrera de l’etiqueta). A més a més, la llet fresca es ven sempre refrigerada, a diferència de la UHT.",
+     "es": "Se puede comprar leche fresca/pasteurizada en muchos supermercados, pero tenemos que fijarnos en que en la etiqueta no ponga UHT, debe poner “fresca” o “pasteurizada” explícitamente, si no lo pone, es UHT, aunque sea ecológica (a veces lo ponen en la parte de atrás de la etiqueta). Además, la leche fresca se vende siempre refrigerada, a diferencia de la UHT.",
+     "en": "Fresh/pasteurized milk can be bought in many supermarkets, but we must check that the label does not say UHT; it must explicitly say “fresh” or “pasteurized”, and if it doesn't, it is UHT, even if it is organic (sometimes it is written on the back of the label). In addition, fresh milk is always sold refrigerated, unlike UHT."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.sorliclic.com/es/p/leche-entera-fresca-botella-1l-alteza/240971](https://www.sorliclic.com/es/p/leche-entera-fresca-botella-1l-alteza/240971)",
+     "es": "[https://www.sorliclic.com/es/p/leche-entera-fresca-botella-1l-alteza/240971](https://www.sorliclic.com/es/p/leche-entera-fresca-botella-1l-alteza/240971)",
+     "en": "[https://www.sorliclic.com/es/p/leche-entera-fresca-botella-1l-alteza/240971](https://www.sorliclic.com/es/p/leche-entera-fresca-botella-1l-alteza/240971)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.ametllerorigen.com/es/leche-fresca-entera-a2-llet-llet-15l/59549.html](https://www.ametllerorigen.com/es/leche-fresca-entera-a2-llet-llet-15l/59549.html)",
+     "es": "[https://www.ametllerorigen.com/es/leche-fresca-entera-a2-llet-llet-15l/59549.html](https://www.ametllerorigen.com/es/leche-fresca-entera-a2-llet-llet-15l/59549.html)",
+     "en": "[https://www.ametllerorigen.com/es/leche-fresca-entera-a2-llet-llet-15l/59549.html](https://www.ametllerorigen.com/es/leche-fresca-entera-a2-llet-llet-15l/59549.html)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "L’única manera de comprar llet crua a un preu assequible (1€ litre), és anant a granges properes: Buscar “granja” a google maps, fixar-se en les que són de vaques, trucar i preguntar si venen llet crua:",
+     "es": "La única manera de comprar leche cruda a un precio asequible (1€ el litro) es yendo a granjas cercanas: Buscar “granja” en Google Maps, fijarse en las que son de vacas, llamar y preguntar si venden leche cruda:",
+     "en": "The only way to buy raw milk at an affordable price (1€ per litre) is by going to nearby farms: Search for “farm” on Google Maps, look at the ones with cows, call and ask whether they sell raw milk:"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[Granja El Prat](https://maps.app.goo.gl/Ndn9gmHBwaWMtrUS9)",
+     "es": "[Granja El Prat](https://maps.app.goo.gl/Ndn9gmHBwaWMtrUS9)",
+     "en": "[Granja El Prat](https://maps.app.goo.gl/Ndn9gmHBwaWMtrUS9)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[Cal Carlot Sat](https://maps.app.goo.gl/Tjf7udVLBW28WiSK9)",
+     "es": "[Cal Carlot Sat](https://maps.app.goo.gl/Tjf7udVLBW28WiSK9)",
+     "en": "[Cal Carlot Sat](https://maps.app.goo.gl/Tjf7udVLBW28WiSK9)"
+    },
+    {
+     "kind": "h3",
+     "depth": 0,
+     "ca": "Nòduls o grans de kefir",
+     "es": "Nódulos o granos de kéfir",
+     "en": "Kefir grains"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "Els nòduls de kefir són com una “fàbrica de bactèries bones”, les quals s’alimenten principalment de lactosa. També són comestibles i saludables, però ens interessa reaprofitar-los constantment perquè afegint nòduls de kefir dins la llet, fa que s’incrementi el número de bactèries beneficioses, accelerant el procés de fermentació que minimitza la lactosa (sobretot en cas d’utilitzar llet pasteuritzada enlloc de crua). Així necessitarem menys dies de fermentació per aconseguir un kefir òptim sense lactosa.",
+     "es": "Los nódulos de kéfir son como una “fábrica de bacterias buenas”, las cuales se alimentan principalmente de lactosa. También son comestibles y saludables, pero nos interesa reaprovecharlos constantemente porque al añadir nódulos de kéfir a la leche se incrementa el número de bacterias beneficiosas, acelerando el proceso de fermentación que minimiza la lactosa (sobre todo en caso de utilizar leche pasteurizada en lugar de cruda). Así necesitaremos menos días de fermentación para conseguir un kéfir óptimo sin lactosa.",
+     "en": "Kefir grains are like a “factory of good bacteria”, which feed mainly on lactose. They are also edible and healthy, but we want to reuse them constantly because adding kefir grains to the milk increases the number of beneficial bacteria, speeding up the fermentation process that minimizes lactose (especially when using pasteurized milk instead of raw). That way we need fewer days of fermentation to get an optimal lactose-free kefir."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "De totes formes, un cop hem introduït nòduls de kefir dins la llet, les bactèries dels nòduls hauran migrat a la llet i s’hauran reproduït al cap d’unes hores. Per tant, encara que després extraiem els nòduls de la llet, aquesta continuarà tenint totes les bactèries dels nòduls amb capacitat de reproducció. Així es pot mantenir viva una colònia de bactèries del kefir aprofitant sempre una mica del kefir anterior per fermentar el següent kefir, inclús sense seguir fent servir els nòduls.",
+     "es": "De todas formas, una vez hemos introducido nódulos de kéfir en la leche, las bacterias de los nódulos habrán migrado a la leche y se habrán reproducido al cabo de unas horas. Por lo tanto, aunque después extraigamos los nódulos de la leche, esta seguirá teniendo todas las bacterias de los nódulos con capacidad de reproducción. Así se puede mantener viva una colonia de bacterias del kéfir aprovechando siempre un poco del kéfir anterior para fermentar el siguiente kéfir, incluso sin seguir utilizando los nódulos.",
+     "en": "Anyway, once we have put kefir grains into the milk, the bacteria in the grains will have migrated to the milk and reproduced after a few hours. Therefore, even if we later remove the grains from the milk, it will keep all the bacteria from the grains, able to reproduce. This way a colony of kefir bacteria can be kept alive by always using a little of the previous kefir to ferment the next one, even without continuing to use the grains."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "Si hem de deixar de prendre kefir durant un temps, els nòduls s’han de guardar amb una miqueta de llet/kefir perquè puguin seguir alimentant-se i sobreviure, preferiblement dins la nevera perquè les bactèries quedin “adormides”. Tot i així, possiblement els nòduls poden sobreviure si estan pocs dies sense llet.",
+     "es": "Si tenemos que dejar de tomar kéfir durante un tiempo, los nódulos se deben guardar con un poquito de leche/kéfir para que puedan seguir alimentándose y sobrevivir, preferiblemente dentro de la nevera para que las bacterias queden “dormidas”. Aun así, posiblemente los nódulos pueden sobrevivir si están pocos días sin leche.",
+     "en": "If we have to stop taking kefir for a while, the grains must be kept with a little milk/kefir so they can keep feeding and survive, preferably in the fridge so the bacteria go “dormant”. Even so, the grains can possibly survive a few days without milk."
+    },
+    {
+     "kind": "h3",
+     "depth": 0,
+     "ca": "Es poden adquirir “nòduls/grans de kefir” de dues maneres",
+     "es": "Los “nódulos/granos de kéfir” se pueden adquirir de dos maneras",
+     "en": "Kefir “nodules/grains” can be obtained in two ways"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "→ Anar a recollir-los d’algú que els regali en grups de facebook de compartició de nòduls d’Espanya (buscant als missatges del grup, quasi sempre hi ha algú que n’ofereixi pels voltants de Barcelona)",
+     "es": "→ Ir a recogerlos de alguien que los regale en grupos de Facebook de intercambio de nódulos de España (buscando en los mensajes del grupo, casi siempre hay alguien que ofrece por los alrededores de Barcelona)",
+     "en": "→ Go and pick them up from someone who gives them away in Facebook kefir-grain sharing groups in Spain (searching the group's messages, there is almost always someone offering them around Barcelona)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.facebook.com/groups/5461547560618357](https://www.facebook.com/groups/5461547560618357)",
+     "es": "[https://www.facebook.com/groups/5461547560618357](https://www.facebook.com/groups/5461547560618357)",
+     "en": "[https://www.facebook.com/groups/5461547560618357](https://www.facebook.com/groups/5461547560618357)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.facebook.com/groups/243840779324287](https://www.facebook.com/groups/243840779324287)",
+     "es": "[https://www.facebook.com/groups/243840779324287](https://www.facebook.com/groups/243840779324287)",
+     "en": "[https://www.facebook.com/groups/243840779324287](https://www.facebook.com/groups/243840779324287)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "→ Comprar online (vigilar que no siguin deshidratats):",
+     "es": "→ Comprar online (vigilar que no sean deshidratados):",
+     "en": "→ Buy online (make sure they are not dehydrated):"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.amazon.es/Nodulos-Frescos-Instrucciones-Recetas-asesoramiento/dp/B014STPCR4/](https://www.amazon.es/Nodulos-Frescos-Instrucciones-Recetas-asesoramiento/dp/B014STPCR4/)",
+     "es": "[https://www.amazon.es/Nodulos-Frescos-Instrucciones-Recetas-asesoramiento/dp/B014STPCR4/](https://www.amazon.es/Nodulos-Frescos-Instrucciones-Recetas-asesoramiento/dp/B014STPCR4/)",
+     "en": "[https://www.amazon.es/Nodulos-Frescos-Instrucciones-Recetas-asesoramiento/dp/B014STPCR4/](https://www.amazon.es/Nodulos-Frescos-Instrucciones-Recetas-asesoramiento/dp/B014STPCR4/)"
     },
     {
      "kind": "h3",
@@ -1406,30 +1532,58 @@
     {
      "kind": "h3",
      "depth": 0,
-     "ca": "Nòduls o grans de kefir",
-     "es": "Nódulos o granos de kéfir",
-     "en": "Kefir grains"
+     "ca": "Pots de vidre que deixin escapar el gas de la fermentació",
+     "es": "Botes de vidrio que dejen escapar el gas de la fermentación",
+     "en": "Glass jars that let the fermentation gas escape"
     },
     {
      "kind": "p",
      "depth": 0,
-     "ca": "Els nòduls de kefir són com una “fàbrica de bactèries bones”, les quals s’alimenten principalment de lactosa. També són comestibles i saludables, però ens interessa reaprofitar-los constantment perquè afegint nòduls de kefir dins la llet, fa que s’incrementi el número de bactèries beneficioses, accelerant el procés de fermentació que minimitza la lactosa (sobretot en cas d’utilitzar llet pasteuritzada enlloc de crua). Així necessitarem menys dies de fermentació per aconseguir un kefir òptim sense lactosa.",
-     "es": "Los nódulos de kéfir son como una “fábrica de bacterias buenas”, las cuales se alimentan principalmente de lactosa. También son comestibles y saludables, pero nos interesa reaprovecharlos constantemente porque al añadir nódulos de kéfir a la leche se incrementa el número de bacterias beneficiosas, acelerando el proceso de fermentación que minimiza la lactosa (sobre todo en caso de utilizar leche pasteurizada en lugar de cruda). Así necesitaremos menos días de fermentación para conseguir un kéfir óptimo sin lactosa.",
-     "en": "Kefir grains are like a “factory of good bacteria”, which feed mainly on lactose. They are also edible and healthy, but we want to reuse them constantly because adding kefir grains to the milk increases the number of beneficial bacteria, speeding up the fermentation process that minimizes lactose (especially when using pasteurized milk instead of raw). That way we need fewer days of fermentation to get an optimal lactose-free kefir."
+     "ca": "Utilitzar sempre **pots de vidre**, ja que l’acidesa de la fermentació en contacte amb el plàstic, genera microplàstics.",
+     "es": "Utilizar siempre **botes de vidrio**, ya que la acidez de la fermentación en contacto con el plástico genera microplásticos.",
+     "en": "Always use **glass jars**, since the acidity of the fermentation in contact with plastic generates microplastics."
     },
     {
      "kind": "p",
      "depth": 0,
-     "ca": "De totes formes, un cop hem introduït nòduls de kefir dins la llet, les bactèries dels nòduls hauran migrat a la llet i s’hauran reproduït al cap d’unes hores. Per tant, encara que després extraiem els nòduls de la llet, aquesta continuarà tenint totes les bactèries dels nòduls amb capacitat de reproducció. Així es pot mantenir viva una colònia de bactèries del kefir aprofitant sempre una mica del kefir anterior per fermentar el següent kefir, inclús sense seguir fent servir els nòduls.",
-     "es": "De todas formas, una vez hemos introducido nódulos de kéfir en la leche, las bacterias de los nódulos habrán migrado a la leche y se habrán reproducido al cabo de unas horas. Por lo tanto, aunque después extraigamos los nódulos de la leche, esta seguirá teniendo todas las bacterias de los nódulos con capacidad de reproducción. Así se puede mantener viva una colonia de bacterias del kéfir aprovechando siempre un poco del kéfir anterior para fermentar el siguiente kéfir, incluso sin seguir utilizando los nódulos.",
-     "en": "Anyway, once we have put kefir grains into the milk, the bacteria in the grains will have migrated to the milk and reproduced after a few hours. Therefore, even if we later remove the grains from the milk, it will keep all the bacteria from the grains, able to reproduce. This way a colony of kefir bacteria can be kept alive by always using a little of the previous kefir to ferment the next one, even without continuing to use the grains."
+     "ca": "**No tapar el pot amb tapes de metall** (que venen per defecte al comprar els pots), ja que la humitat i l’acidesa fan que es rovelli i pugui contaminar el ferment. Es pot fer servir tapes de metall només durant unes hores per transportar-lo, sempre hi quan no estigui rovellada. Les tapes de metall s’han d’assecar molt bé sempre després de rentar-les, perquè no es rovellin. Es pot utilitzar utensilis de metall com cullera o colador sense problemes.",
+     "es": "**No tapar el bote con tapas de metal** (que vienen por defecto al comprar los botes), ya que la humedad y la acidez hacen que se oxide y pueda contaminar el fermento. Se pueden usar tapas de metal solo durante unas horas para transportarlo, siempre y cuando no esté oxidada. Las tapas de metal se deben secar muy bien siempre después de lavarlas, para que no se oxiden. Se pueden utilizar utensilios de metal como cuchara o colador sin problemas.",
+     "en": "**Do not cover the jar with metal lids** (which come by default when buying the jars), since humidity and acidity make them rust and can contaminate the ferment. Metal lids can be used only for a few hours to transport it, as long as they are not rusty. Metal lids must always be dried very well after washing, so they do not rust. Metal utensils such as a spoon or strainer can be used without problems."
     },
     {
      "kind": "p",
      "depth": 0,
-     "ca": "Si hem de deixar de prendre kefir durant un temps, els nòduls s’han de guardar amb una miqueta de llet/kefir perquè puguin seguir alimentant-se i sobreviure, preferiblement dins la nevera perquè les bactèries quedin “adormides”. Tot i així, possiblement els nòduls poden sobreviure si estan pocs dies sense llet.",
-     "es": "Si tenemos que dejar de tomar kéfir durante un tiempo, los nódulos se deben guardar con un poquito de leche/kéfir para que puedan seguir alimentándose y sobrevivir, preferiblemente dentro de la nevera para que las bacterias queden “dormidas”. Aun así, posiblemente los nódulos pueden sobrevivir si están pocos días sin leche.",
-     "en": "If we have to stop taking kefir for a while, the grains must be kept with a little milk/kefir so they can keep feeding and survive, preferably in the fridge so the bacteria go “dormant”. Even so, the grains can possibly survive a few days without milk."
+     "ca": "Durant la fermentació, el pot de kefir ha de tenir una tapa que **deixi escapar el gas (diòxid de carboni) produït per la fermentació** i eviti que la pressió del gas trenqui el pot. Per tant lo més comú i pràctic és utilitzar un **paper de cuina**, tovalló o “**tela filtrante de algodón**” de tipus muselina o cheesecloth, subjectat **amb una goma** per tapar el pot i evitar que hi entrin insectes o pols. També es podria utilitzar una tapa que no es rovelli, de plàstic o d’acer inoxidable (que són més cares) tapada sense “apretar” perquè deixi escapar el gas, però no és necessari.",
+     "es": "Durante la fermentación, el bote de kéfir debe tener una tapa que **deje escapar el gas (dióxido de carbono) producido por la fermentación** y evite que la presión del gas rompa el bote. Por lo tanto lo más común y práctico es utilizar un **papel de cocina**, servilleta o **tela filtrante de algodón** de tipo muselina o cheesecloth, sujetado **con una goma** para tapar el bote y evitar que entren insectos o polvo. También se podría utilizar una tapa que no se oxide, de plástico o de acero inoxidable (que son más caras) tapada sin apretar para que deje escapar el gas, pero no es necesario.",
+     "en": "During fermentation, the kefir jar must have a lid that **lets the gas (carbon dioxide) produced by the fermentation escape** and prevents the gas pressure from breaking the jar. Therefore the most common and practical option is to use a **paper towel**, napkin or **cotton filter cloth** such as muslin or cheesecloth, held on **with a rubber band** to cover the jar and keep insects or dust out. A lid that does not rust, made of plastic or stainless steel (which are more expensive), placed on without tightening so that the gas can escape, could also be used, but it is not necessary."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "Si es fermenta amb nòduls de kefir, lo més pràctic és utilitzar un mínim de **3 pots de 2 litres **o **4 pots de 1,5 litres**, preferiblement amb tamany de tapa estàndard “de boca ancha 8,2 cm”, així si les tapes es rovellen, se'n poden comprar de noves del mateix tamany.",
+     "es": "Si se fermenta con nódulos de kéfir, lo más práctico es utilizar un mínimo de **3 botes de 2 litros **o **4 botes de 1,5 litros**, preferiblemente con tamaño de tapa estándar de boca ancha 8,2 cm, así si las tapas se oxidan, se pueden comprar nuevas del mismo tamaño.",
+     "en": "If fermenting with kefir grains, the most practical option is to use a minimum of **3 jars of 2 litres **or **4 jars of 1.5 litres**, preferably with a standard wide-mouth lid size of 8.2 cm, so that if the lids rust, new ones of the same size can be bought."
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.amazon.es/dp/B0FHVP2W95/](https://www.amazon.es/dp/B0FHVP2W95/)",
+     "es": "[https://www.amazon.es/dp/B0FHVP2W95/](https://www.amazon.es/dp/B0FHVP2W95/)",
+     "en": "[https://www.amazon.es/dp/B0FHVP2W95/](https://www.amazon.es/dp/B0FHVP2W95/)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "[https://www.amazon.es/Bormioli-Bote-Tapa-transparente-Paquete/dp/B0DS27T799/](https://www.amazon.es/Bormioli-Bote-Tapa-transparente-Paquete/dp/B0DS27T799/)",
+     "es": "[https://www.amazon.es/Bormioli-Bote-Tapa-transparente-Paquete/dp/B0DS27T799/](https://www.amazon.es/Bormioli-Bote-Tapa-transparente-Paquete/dp/B0DS27T799/)",
+     "en": "[https://www.amazon.es/Bormioli-Bote-Tapa-transparente-Paquete/dp/B0DS27T799/](https://www.amazon.es/Bormioli-Bote-Tapa-transparente-Paquete/dp/B0DS27T799/)"
+    },
+    {
+     "kind": "p",
+     "depth": 0,
+     "ca": "Amb aquests 3 o 4 pots, podem comprar un pack de 6 litres de llet pasteuritzada o crua i omplir-los quasi tots per fermentar a la vegada fora de la nevera. La llet que no hi càpiga als pots, la guardem de moment a la nevera. D’aquesta manera en un dels pots hi posarem tots els nòduls de kefir i més quantitat del kefir ja fermentat prèviament, perquè fermenti més ràpidament i ens el poguem beure el primer. En els altres pots, hi barrejarem la llet amb només una mica de kefir ja fermentat, perquè de moment fermenti més lentament. Gràcies a aquesta tècnica òptima de fermentació (la tradicional), es pot deixar els pots de kefir fermentant durant molts dies sense que es facin malbé ni que es tornin massa àcids. Un cop el primer pot ja hagi fermentat, traslladarem els nòduls de kefir d’un pot a l’altre seguint els passos descrits a continuació.",
+     "es": "Con estos 3 o 4 botes, podemos comprar un pack de 6 litros de leche pasteurizada o cruda y llenarlos casi todos para fermentar a la vez fuera de la nevera. La leche que no quepa en los botes, la guardamos de momento en la nevera. De esta manera en uno de los botes pondremos todos los nódulos de kéfir y más cantidad del kéfir ya fermentado previamente, para que fermente más rápidamente y podamos bebernos el primero. En los otros botes, mezclaremos la leche con solo un poco de kéfir ya fermentado, para que de momento fermente más lentamente. Gracias a esta técnica óptima de fermentación (la tradicional), se pueden dejar los botes de kéfir fermentando durante muchos días sin que se estropeen ni que se vuelvan demasiado ácidos. Una vez el primer bote ya haya fermentado, trasladaremos los nódulos de kéfir de un bote al otro siguiendo los pasos descritos a continuación.",
+     "en": "With these 3 or 4 jars, we can buy a 6-litre pack of pasteurized or raw milk and fill almost all of them to ferment at the same time outside the fridge. The milk that does not fit in the jars is kept in the fridge for now. This way, in one of the jars we will put all the kefir grains and a larger amount of the previously fermented kefir, so that it ferments faster and we can drink it first. In the other jars, we will mix the milk with only a little already fermented kefir, so that for now it ferments more slowly. Thanks to this optimal fermentation technique (the traditional one), the kefir jars can be left fermenting for many days without spoiling or becoming too acidic. Once the first jar has fermented, we will move the kefir grains from one jar to the other following the steps described below."
     },
     {
      "kind": "h2",
@@ -1441,9 +1595,9 @@
     {
      "kind": "p",
      "depth": 0,
-     "ca": "Barrejar la llet no fermentada amb un 10-20% de kefir de llet prèviament fermentada en varis pots de vidre (millor de 1,5L), reutilitzats de la fermentació prèvia sense netejar-los. En un o dos d’aquests pots, introduir-hi nòduls de kefir, en la resta no cal. Deixar-ho **fermentar mínim 24 hores** (no hi ha màxim), millor entre 30 i 43 Cº dins el forn (amb el ventilador activat i un termòmetre a dins) o amb una estoreta o caixa d’escalfament.",
-     "es": "Mezclar la leche no fermentada con un 10-20% de kéfir de leche previamente fermentada en varios botes de vidrio (mejor de 1,5L), reutilizados de la fermentación previa sin limpiarlos. En uno o dos de estos botes, introducir nódulos de kéfir, en el resto no hace falta. Dejarlo **fermentar mínimo 24 horas** (no hay máximo), mejor entre 30 y 43 Cº dentro del horno (con el ventilador activado y un termómetro dentro) o con una esterilla o caja de calentamiento.",
-     "en": "Mix the unfermented milk with 10-20% of previously fermented milk kefir in several glass jars (preferably 1.5L), reused from the previous fermentation without cleaning them. In one or two of these jars, add kefir grains; the rest don't need them. Leave it to **ferment for at least 24 hours** (there is no maximum), preferably between 30 and 43 Cº inside the oven (with the fan on and a thermometer inside) or with a heating mat or box."
+     "ca": "Barrejar la llet no fermentada amb un 10-20% de kefir de llet prèviament fermentada en varis pots de vidre (millor de 1,5L), reutilitzats de la fermentació prèvia sense netejar-los. En un o dos d’aquests pots, introduir-hi nòduls de kefir, en la resta no cal. Deixar-ho **fermentar mínim 24 hores** (no hi ha màxim), millor entre 20 i 45 Cº dins el forn (amb el ventilador activat i un termòmetre a dins) o amb una estoreta o caixa d’escalfament. Com més temperatura fins a 45Cº, més ràpid anirà la fermentació.",
+     "es": "Mezclar la leche no fermentada con un 10-20% de kéfir de leche previamente fermentada en varios botes de vidrio (mejor de 1,5L), reutilizados de la fermentación previa sin limpiarlos. En uno o dos de estos botes, introducir nódulos de kéfir, en el resto no hace falta. Dejarlo **fermentar mínimo 24 horas** (no hay máximo), mejor entre 20 y 45 Cº dentro del horno (con el ventilador activado y un termómetro dentro) o con una esterilla o caja de calentamiento. Cuanta más temperatura hasta 45Cº, más rápido irá la fermentación.",
+     "en": "Mix the unfermented milk with 10-20% of previously fermented milk kefir in several glass jars (preferably 1.5L), reused from the previous fermentation without cleaning them. In one or two of these jars, add kefir grains; the rest don't need them. Leave it to **ferment for at least 24 hours** (there is no maximum), preferably between 20 and 45 Cº inside the oven (with the fan on and a thermometer inside) or with a heating mat or box. The higher the temperature up to 45Cº, the faster the fermentation will go."
     },
     {
      "kind": "p",
