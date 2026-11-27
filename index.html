@@ -93,6 +93,7 @@ box-shadow:0 10px 30px -18px rgba(14,80,64,.4);scroll-margin-top:calc(var(--top)
 .lv2>li::before{width:9px;height:9px;top:.48em}.lv3>li::before{width:8px;height:8px;top:.5em}.lv4>li::before{width:7px;height:7px;top:.53em}
 .lv>li>p{margin:.2rem 0}
 .t-g{color:#1F6B2C}.t-r{color:#A3201B}.t-b{color:#1B4F9C}
+a{color:var(--brand-d)}.sec-body a{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 mark{padding:0 .15em;border-radius:3px;background:#FFE48A;color:inherit}
 .chip{display:inline-block;min-width:2.3em;margin-right:.5em;padding:0 .6em;border-radius:99px;text-align:center;font-size:.82rem;font-weight:700;line-height:1.5}
 .v-no .chip{background:#FBE1DE;color:#8E1B16}.v-yes .chip{background:#D9F0DF;color:#17622A}
@@ -154,6 +155,7 @@ const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const TAGS={'**':['<strong>','</strong>'],'_':['<em>','</em>'],'++':['<u>','</u>'],'==':['<mark>','</mark>'],g:['<span class="t-g">','</span>'],r:['<span class="t-r">','</span>'],b:['<span class="t-b">','</span>']};
 function inline(s){let out='',st=[];const closeTo=k=>{const tmp=[];while(st.length){const x=st.pop();out+=TAGS[x][1];if(x===k)break;tmp.push(x)}tmp.reverse().forEach(x=>{st.push(x);out+=TAGS[x][0]})};
 for(let i=0;i<s.length;){const c=s[i];if(c==='\\'&&i+1<s.length){out+=esc(s[i+1]);i+=2;continue}
+if(c==='['){const m=/^\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/.exec(s.slice(i));if(m){out+=`<a href="${esc(m[2]).replace(/"/g,'&quot;')}" target="_blank" rel="noopener noreferrer">${esc(m[1].replace(/\\(.)/g,'$1'))}</a>`;i+=m[0].length;continue}}
 let k=null,len=0,cl=false;if(s.startsWith('**',i)){k='**';len=2}else if(c==='_'){k='_';len=1}else if(s.startsWith('++',i)){k='++';len=2}else if(s.startsWith('==',i)){k='==';len=2}
 else{const m=/^\{(\/?)([grb])\}/.exec(s.slice(i,i+5));if(m){k=m[2];len=m[0].length;cl=!!m[1]}}
 if(!k){out+=esc(c);i++;continue}i+=len;
