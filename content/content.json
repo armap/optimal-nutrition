@@ -1323,8 +1323,8 @@
           "kind": "li",
           "depth": 1,
           "ca": "Barrejant-la amb una mica de kefir de llet ja fermentada prèviament (mètode backslopping), que conté bactèries.",
-          "es": "Mezclándola con un poco de kéfir de leche ya fermentada previamente, que contiene bacterias.",
-          "en": "By mixing it with a little milk kefir that has already been fermented, which contains bacteria."
+          "es": "Mezclándola con un poco de kéfir de leche ya fermentada previamente (método backslopping), que contiene bacterias.",
+          "en": "By mixing it with a little milk kefir that has already been fermented (backslopping method), which contains bacteria."
         },
         {
           "kind": "p",
@@ -1504,9 +1504,9 @@
         {
           "kind": "h3",
           "depth": 0,
-          "ca": "Tècnica òptima de fermentació amb menys acidesa i sinerèsis",
-          "es": "Técnica óptima de fermentación con menos acidez y sinéresis",
-          "en": "Optimal fermentation technique with less acidity and syneresis"
+          "ca": "Tècnica òptima de fermentació amb menys acidesa i sinerèsis (backslopping)",
+          "es": "Técnica óptima de fermentación con menos acidez y sinéresis (backslopping)",
+          "en": "Optimal fermentation technique with less acidity and syneresis (backslopping)"
         },
         {
           "kind": "p",
@@ -1518,9 +1518,9 @@
         {
           "kind": "p",
           "depth": 0,
-          "ca": "Si** fermentem la llet barrejant-la amb una mica de kefir de llet ja fermentada** prèviament (sense netejar el pot, com el mètode tradicional), aconseguirem que les bactèries de la fermentació vagin “evolucionant” convertint-se en bactèries capaces de produir les molècules EPS (ExoPolySaccharides), les quals ajuden a “amortiguar/absorbir” l’acidesa, ajudant a que la fermentació de la lactosa avanci sense que el kefir es torni massa àcid. Això també reduirà la sinerèsis (separació del “suero” i la quallada).",
-          "es": "Si** fermentamos la leche mezclándola con un poco de kéfir de leche ya fermentada** previamente (sin limpiar el bote, como el método tradicional), conseguiremos que las bacterias de la fermentación vayan “evolucionando” convirtiéndose en bacterias capaces de producir las moléculas EPS (ExoPolySaccharides), las cuales ayudan a amortiguar/absorber la acidez, ayudando a que la fermentación de la lactosa avance sin que el kéfir se vuelva demasiado ácido. Esto también reducirá la sinéresis (separación del suero y la cuajada).",
-          "en": "If we **ferment the milk by mixing it with a little milk kefir that has already been fermented** (without cleaning the jar, like the traditional method), the fermentation bacteria will gradually “evolve” into bacteria capable of producing EPS molecules (ExoPolySaccharides), which help buffer/absorb the acidity, helping the lactose fermentation advance without the kefir becoming too acidic. This will also reduce syneresis (separation of the whey and the curd)."
+          "ca": "El mètode **backslopping** (tradicional) consisteix en **fermentar la llet barrejant-la amb una mica de kefir de llet ja fermentada** prèviament (sense netejar el pot), així aconseguirem que les bactèries de la fermentació vagin “evolucionant” convertint-se en bactèries capaces de produir les molècules EPS (ExoPolySaccharides), les quals ajuden a “amortiguar/absorbir” l’acidesa, ajudant a que la fermentació de la lactosa avanci sense que el kefir es torni massa àcid. Això també reduirà la sinerèsis (separació del “suero” i la quallada).",
+          "es": "El métodod **backslopping** (tradicional) consiste en **fermentar la leche mezclándola con un poco de kéfir de leche ya fermentada** previamente (sin limpiar el bote), así conseguiremos que las bacterias de la fermentación vayan “evolucionando” convirtiéndose en bacterias capaces de producir las moléculas EPS (ExoPolySaccharides), las cuales ayudan a amortiguar/absorber la acidez, ayudando a que la fermentación de la lactosa avance sin que el kéfir se vuelva demasiado ácido. Esto también reducirá la sinéresis (separación del suero y la cuajada).",
+          "en": "The **backslopping** method (traditional) consists on **fermenting milk by mixing it with a little milk kefir that has already been fermented** (without cleaning the jar), this way the fermentation bacteria will gradually “evolve” into bacteria capable of producing EPS molecules (ExoPolySaccharides), which help buffer/absorb the acidity, helping the lactose fermentation advance without the kefir becoming too acidic. This will also reduce syneresis (separation of the whey and the curd)."
         },
         {
           "kind": "p",
